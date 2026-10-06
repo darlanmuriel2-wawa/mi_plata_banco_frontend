@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Plata | Banco Digital Futurista</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER / NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved neon-icon"></i>
+                <span>MI PLATA</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">Personas</a>
+                <a href="#">Empresas</a>
+                <a href="#">Canales Digitales</a>
+                <a href="#">Seguros</a>
+                <a href="#">Inversión</a>
+            </nav>
+            <div class="nav-actions" id="navActions">
+                <button class="btn-outline" id="openLoginBtn"><i class="fa-solid fa-user-lock"></i> Ingresar</button>
+                <button class="btn-neon" id="openRegisterBtn"><i class="fa-solid fa-user-plus"></i> Registrarse</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="main-container">
+        
+        <!-- VISTA 1: HOME / LANDING -->
+        <section id="homeView" class="view active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <span class="badge-neon">Banca Digital 2026 ⚡</span>
+                    <h1>El futuro de tus finanzas <br><span class="gradient-text">Sin Límites</span></h1>
+                    <p>Gestiona tus cuentas de ahorros, nómina, corriente y tarjetas de crédito con seguridad donde quieras.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-neon-large" onclick="switchView('registerView')">Crear Cuenta Gratis <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="btn-outline-large" onclick="switchView('loginView')">Iniciar Sesión</button>
+                    </div>
+                </div>
+                <div class="hero-banner-card">
+                    <div class="neon-card-glow">
+                        <div class="card-chip"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="card-number">**** **** **** 8901</div>
+                        <div class="card-info">
+                            <div><span>Titular</span><strong>**MUESTRA**MI**PLATA**</strong></div>
+                            <div><span>Expira</span><strong>08/30</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-wallet"></i>
+                    <h3>Cuentas Múltiples</h3>
+                    <p>Ahorros, Nómina y Corriente integradas bajo tu perfil único de usuario.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Transacciones Instantáneas</h3>
+                    <p>Envía y recibe dinero en tiempo real con tecnología blockchain simulada.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Inversiones AFC</h3>
+                    <p>Haz crecer tu capital con tasas preferenciales y beneficios tributarios.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA 2: LOGIN -->
+        <section id="loginView" class="view">
+            <div class="auth-box">
+                <div class="auth-header">
+                    <i class="fa-solid fa-fingerprint neon-icon-big"></i>
+                    <h2>Iniciar Sesión</h2>
+                    <p>Accede a tu panel financiero "Mi Plata"</p>
+                </div>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-envelope"></i> Correo Electrónico</label>
+                        <input type="email" id="loginEmail" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-lock"></i> Contraseña</label>
+                        <input type="password" id="loginPassword" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-neon-full">Entrar al Sistema</button>
+                </form>
+                <p class="auth-switch">¿No tienes cuenta? <a href="#" onclick="switchView('registerView')">Regístrate aquí</a></p>
+                <button class="btn-back" onclick="switchView('homeView')"><i class="fa-solid fa-arrow-left"></i> Volver al inicio</button>
+            </div>
+        </section>
+
+        <!-- VISTA 3: REGISTRO -->
+        <section id="registerView" class="view">
+            <div class="auth-box">
+                <div class="auth-header">
+                    <i class="fa-solid fa-user-astronaut neon-icon-big"></i>
+                    <h2>Registro de Cliente</h2>
+                    <p>Crea tu cuenta en el sistema bancario</p>
+                </div>
+                <form id="registerForm">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Nombre</label>
+                            <input type="text" id="regNombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Apellido</label>
+                            <input type="text" id="regApellido" placeholder="Tu apellido" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="regEmail" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Contraseña</label>
+                        <input type="password" id="regPassword" placeholder="••••••••" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Tipo de Persona</label>
+                        <select id="regTipoPersona">
+                            <option value="Natural">Persona Natural</option>
+                            <option value="Juridica">Persona Jurídica (Empresa)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-neon-full">Crear Cuenta</button>
+                </form>
+                <p class="auth-switch">¿Ya tienes cuenta? <a href="#" onclick="switchView('loginView')">Inicia sesión</a></p>
+                <button class="btn-back" onclick="switchView('homeView')"><i class="fa-solid fa-arrow-left"></i> Volver al inicio</button>
+            </div>
+        </section>
+
+        <!-- VISTA 4: DASHBOARD (PANEL DE USUARIO) -->
+        <section id="dashboardView" class="view">
+            <div class="dashboard-header">
+                <div>
+                    <h2>Bienvenido, <span id="userNameDisplay" class="gradient-text">Usuario</span></h2>
+                    <p class="subtitle"><i class="fa-solid fa-calendar-days"></i> <span id="currentDateDisplay"></span></p>
+                </div>
+                <button class="btn-outline-danger" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</button>
+            </div>
+
+            <!-- Resumen de Cuentas (Basado en el diagrama) -->
+            <div class="dashboard-grid">
+                <!-- Cuenta de Ahorros -->
+                <div class="account-card">
+                    <div class="card-top">
+                        <span class="badge-savings">Cuenta de Ahorros</span>
+                        <i class="fa-solid fa-piggy-bank"></i>
+                    </div>
+                    <div class="account-number">Cuenta ****-5678</div>
+                    <div class="account-balance">$ 5.250.000</div>
+                    <div class="account-footer"><i class="fa-solid fa-bolt"></i> Interés: 1.5% mensual</div>
+                </div>
+
+                <!-- Cuenta Corriente -->
+                <div class="account-card">
+                    <div class="card-top">
+                        <span class="badge-current">Cuenta Corriente</span>
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="account-number">Cuenta ****-1234</div>
+                    <div class="account-balance">$ 3.100.000</div>
+                    <div class="account-footer"><i class="fa-solid fa-shield"></i> Sobregiro disp: $ 620.000</div>
+                </div>
+
+                <!-- Tarjeta de Crédito -->
+                <div class="account-card card-credit">
+                    <div class="card-top">
+                        <span class="badge-credit">Tarjeta de Crédito</span>
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <div class="account-number">4532 **** **** 8901</div>
+                    <div class="cupo-info">
+                        <div><span>Cupo Total</span><strong>$ 10.000.000</strong></div>
+                        <div><span>Deuda Actual</span><strong class="text-danger">$ 2.500.000</strong></div>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 25%;"></div></div>
+                </div>
+            </div>
+
+            <!-- Acciones Rápidas -->
+            <div class="section-title"><h3><i class="fa-solid fa-bolt"></i> Acciones Rápidas</h3></div>
+            <div class="quick-actions">
+                <button class="action-btn" onclick="alert('Función de consignación simulada con éxito')"><i class="fa-solid fa-plus-circle"></i> Consignar</button>
+                <button class="action-btn" onclick="alert('Función de retiro simulada con éxito')"><i class="fa-solid fa-money-bill-transfer"></i> Retirar</button>
+                <button class="action-btn" onclick="alert('Módulo de transferencias en línea')"><i class="fa-solid fa-arrow-right-arrow-left"></i> Transferir</button>
+                <button class="action-btn" onclick="alert('Historial de movimientos cargado')"><i class="fa-solid fa-clock-rotate-left"></i> Movimientos</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Mi Plata - Proyecto Académico CESDE Front-End 1. Basado en Arquitectura POO.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
