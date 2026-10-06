@@ -57,6 +57,14 @@ correo darlan@cesde.net, clave 123456
 
 ---
 
+
+## ♠️ Diagrama UML
+
+![Diagrama de Clases](/docs/Banco1.drawio.svg)
+
+
+
+
 ## 📌 Guía para subir a GitHub
 
 Sigue estos pasos desde tu terminal (Git Bash o consola):
